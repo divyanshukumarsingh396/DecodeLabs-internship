@@ -1,0 +1,173 @@
+/* Google Font */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* Navbar */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(15,23,42,.8);
+backdrop-filter:blur(15px);
+}
+
+.navbar{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#38bdf8;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.4s;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+.menu-btn{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+width:90%;
+margin:auto;
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:50px;
+}
+
+.left h1{
+font-size:60px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.left p{
+font-size:18px;
+color:#cbd5e1;
+margin-bottom:35px;
+line-height:1.8;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+}
+
+.btn{
+padding:15px 35px;
+background:#38bdf8;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(56,189,248,.4);
+}
+
+.btn2{
+padding:15px 35px;
+border:2px solid #38bdf8;
+border-radius:50px;
+text-decoration:none;
+color:white;
+transition:.4s;
+}
+
+.btn2:hover{
+background:#38bdf8;
+}
+
+.right{
+display:flex;
+justify-content:center;
+}
+
+.right img{
+width:100%;
+max-width:550px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+padding-top:120px;
+}
+
+.left h1{
+font-size:42px;
+}
+
+.buttons{
+justify-content:center;
+}
+
+.nav-links{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.right img{
+max-width:400px;
+}
+
+}
